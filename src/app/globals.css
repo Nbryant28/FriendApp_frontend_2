@@ -3,6 +3,8 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --color-primary: #2563eb; /* blue-600 */
+  --color-accent: #facc15;
 }
 
 @theme inline {
@@ -10,6 +12,13 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+}
+
+.btn-primary {
+  @apply bg-[--color-accent] text-black font-semibold px-4 py-2 rounded shadow hover:brightness-110;
+}
+.card {
+  @apply bg-white rounded-lg border border-gray-100 transition-all;
 }
 
 @media (prefers-color-scheme: dark) {
